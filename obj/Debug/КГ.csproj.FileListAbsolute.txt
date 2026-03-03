@@ -1,0 +1,13 @@
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.MainForm.resources
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.Properties.Resources.resources
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.csproj.GenerateResource.cache
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\КГ\bin\Debug\КГ.exe.config
+C:\Users\User\Documents\GitHub\КГ\bin\Debug\КГ.exe
+C:\Users\User\Documents\GitHub\КГ\bin\Debug\КГ.pdb
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.exe
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.pdb
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.exe.config
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.LAB1.resources
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.Ok.resources
