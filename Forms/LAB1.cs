@@ -297,15 +297,13 @@ namespace КГ
             if (n != matrix.GetLength(1))
                 throw new ArgumentException("Matrix must be square.");
 
-            // Create a copy so we don't modify the original matrix
             double[,] a = (double[,])matrix.Clone();
 
             double det = 1.0;
-            int sign = 1; // Tracks row swaps
+            int sign = 1;
 
             for (int i = 0; i < n; i++)
             {
-                // Partial pivoting: find the row with the largest absolute value in column i
                 int pivotRow = i;
                 double maxAbs = Math.Abs(a[i, i]);
 
@@ -319,11 +317,9 @@ namespace КГ
                     }
                 }
 
-                // If the pivot is zero, determinant is zero
                 if (Math.Abs(a[pivotRow, i]) < 1e-12)
                     return 0.0;
 
-                // Swap rows if needed
                 if (pivotRow != i)
                 {
                     for (int c = 0; c < n; c++)
@@ -332,12 +328,11 @@ namespace КГ
                         a[i, c] = a[pivotRow, c];
                         a[pivotRow, c] = tmp;
                     }
-                    sign *= -1; // Row swap changes sign of determinant
+                    sign *= -1;
                 }
 
-                // Eliminate entries below the pivot
                 double pivot = a[i, i];
-                det *= pivot; // Multiply determinant by pivot value
+                det *= pivot;
 
                 for (int r = i + 1; r < n; r++)
                 {
