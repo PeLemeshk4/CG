@@ -546,36 +546,6 @@
   <data name="&gt;&gt;BypassB.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="ClippingB.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="ClippingB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ClippingB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 322</value>
-  </data>
-  <data name="ClippingB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 64</value>
-  </data>
-  <data name="ClippingB.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="ClippingB.Text" xml:space="preserve">
-    <value>Отсечение</value>
-  </data>
-  <data name="&gt;&gt;ClippingB.Name" xml:space="preserve">
-    <value>ClippingB</value>
-  </data>
-  <data name="&gt;&gt;ClippingB.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ClippingB.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="&gt;&gt;ClippingB.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
   <data name="ClearB.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
@@ -601,7 +571,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;ClearB.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="CDAClipRB.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -766,7 +736,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;AlgorithmsGB.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
     <value>splitContainer1.Panel2</value>

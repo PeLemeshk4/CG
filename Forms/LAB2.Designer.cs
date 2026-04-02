@@ -31,8 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LAB2));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.CanvasPB = new System.Windows.Forms.PictureBox();
+            this.TargetColorB = new System.Windows.Forms.Button();
             this.ThicknessL = new System.Windows.Forms.Label();
             this.ThicknessB = new System.Windows.Forms.Button();
+            this.TargetColorPB = new System.Windows.Forms.PictureBox();
             this.BackgroundColorPB = new System.Windows.Forms.PictureBox();
             this.FillingColorPB = new System.Windows.Forms.PictureBox();
             this.LineColorPB = new System.Windows.Forms.PictureBox();
@@ -42,7 +44,6 @@
             this.FillingColorB = new System.Windows.Forms.Button();
             this.LineColorB = new System.Windows.Forms.Button();
             this.BypassB = new System.Windows.Forms.Button();
-            this.ClippingB = new System.Windows.Forms.Button();
             this.ClearB = new System.Windows.Forms.Button();
             this.AlgorithmsGB = new System.Windows.Forms.GroupBox();
             this.CDAClipRB = new System.Windows.Forms.RadioButton();
@@ -51,18 +52,16 @@
             this.FillingRB = new System.Windows.Forms.RadioButton();
             this.CDARB = new System.Windows.Forms.RadioButton();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
-            this.TargetColorB = new System.Windows.Forms.Button();
-            this.TargetColorPB = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CanvasPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TargetColorPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundColorPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FillingColorPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LineColorPB)).BeginInit();
             this.AlgorithmsGB.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TargetColorPB)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -89,7 +88,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.FillingColorB);
             this.splitContainer1.Panel2.Controls.Add(this.LineColorB);
             this.splitContainer1.Panel2.Controls.Add(this.BypassB);
-            this.splitContainer1.Panel2.Controls.Add(this.ClippingB);
             this.splitContainer1.Panel2.Controls.Add(this.ClearB);
             this.splitContainer1.Panel2.Controls.Add(this.AlgorithmsGB);
             // 
@@ -102,6 +100,13 @@
             this.CanvasPB.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CanvasPB_MouseDown);
             this.CanvasPB.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CanvasPB_MouseUp);
             // 
+            // TargetColorB
+            // 
+            resources.ApplyResources(this.TargetColorB, "TargetColorB");
+            this.TargetColorB.Name = "TargetColorB";
+            this.TargetColorB.UseVisualStyleBackColor = true;
+            this.TargetColorB.Click += new System.EventHandler(this.TargetColorB_Click);
+            // 
             // ThicknessL
             // 
             resources.ApplyResources(this.ThicknessL, "ThicknessL");
@@ -113,6 +118,12 @@
             this.ThicknessB.Name = "ThicknessB";
             this.ThicknessB.UseVisualStyleBackColor = true;
             this.ThicknessB.Click += new System.EventHandler(this.Thickness_Click);
+            // 
+            // TargetColorPB
+            // 
+            resources.ApplyResources(this.TargetColorPB, "TargetColorPB");
+            this.TargetColorPB.Name = "TargetColorPB";
+            this.TargetColorPB.TabStop = false;
             // 
             // BackgroundColorPB
             // 
@@ -170,12 +181,6 @@
             this.BypassB.UseVisualStyleBackColor = true;
             this.BypassB.Click += new System.EventHandler(this.BypassB_Click);
             // 
-            // ClippingB
-            // 
-            resources.ApplyResources(this.ClippingB, "ClippingB");
-            this.ClippingB.Name = "ClippingB";
-            this.ClippingB.UseVisualStyleBackColor = true;
-            // 
             // ClearB
             // 
             resources.ApplyResources(this.ClearB, "ClearB");
@@ -229,19 +234,6 @@
             this.CDARB.TabStop = true;
             this.CDARB.UseVisualStyleBackColor = true;
             // 
-            // TargetColorB
-            // 
-            resources.ApplyResources(this.TargetColorB, "TargetColorB");
-            this.TargetColorB.Name = "TargetColorB";
-            this.TargetColorB.UseVisualStyleBackColor = true;
-            this.TargetColorB.Click += new System.EventHandler(this.TargetColorB_Click);
-            // 
-            // TargetColorPB
-            // 
-            resources.ApplyResources(this.TargetColorPB, "TargetColorPB");
-            this.TargetColorPB.Name = "TargetColorPB";
-            this.TargetColorPB.TabStop = false;
-            // 
             // LAB2
             // 
             resources.ApplyResources(this, "$this");
@@ -256,12 +248,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CanvasPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TargetColorPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundColorPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FillingColorPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LineColorPB)).EndInit();
             this.AlgorithmsGB.ResumeLayout(false);
             this.AlgorithmsGB.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TargetColorPB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,7 +267,6 @@
         private System.Windows.Forms.RadioButton FillingRB;
         private System.Windows.Forms.Button ClearB;
         private System.Windows.Forms.Button BypassB;
-        private System.Windows.Forms.Button ClippingB;
         private System.Windows.Forms.PictureBox LineColorPB;
         private System.Windows.Forms.Label ColorTitleL;
         private System.Windows.Forms.Button BackgroundColorB;
