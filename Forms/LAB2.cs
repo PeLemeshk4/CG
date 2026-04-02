@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,7 +24,7 @@ namespace КГ
         private Color backgroundColor;
         private Color lineColor = Color.Red;
         private Color fillingColor = Color.DarkBlue;
-        private Color outlineColor = Color.Red;
+        private Color targetColor = Color.Red;
         private int thickness = 2;
 
         public LAB2()
@@ -39,6 +41,7 @@ namespace КГ
             LineColorPB.BackColor = lineColor;
             FillingColorPB.BackColor = fillingColor;
             BackgroundColorPB.BackColor = backgroundColor;
+            TargetColorPB.BackColor = targetColor;
             CDARB.Checked = true;
             UpdateCanvas();
         }
@@ -82,6 +85,15 @@ namespace КГ
                 backgroundColor = colorDialog.Color;
                 BackgroundColorPB.BackColor = backgroundColor;
                 CanvasPB.BackColor = backgroundColor;
+            }
+        }
+        private void TargetColorB_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = colorDialog.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            {
+                targetColor = colorDialog.Color;
+                TargetColorPB.BackColor = targetColor;
             }
         }
 
@@ -164,7 +176,23 @@ namespace КГ
 
         private void BypassB_Click(object sender, EventArgs e)
         {
-            List<Point> list = ExploreContourFromBitmap(lineColor);
+            List<Point> list = ExploreContourFromBitmap(targetColor);
+
+            Form form = new Form();
+            form.Size = new Size(bitmap.Width, bitmap.Height);
+            PictureBox pb = new PictureBox();
+            pb.Size = new Size(bitmap.Width, bitmap.Height);
+            pb.BackColor = backgroundColor;
+            form.Controls.Add(pb);
+            Bitmap newBitmap = new Bitmap(bitmap.Width, bitmap.Height);
+            foreach (Point p in list)
+            {
+                newBitmap.SetPixel(p.X, p.Y, targetColor);
+            }
+            pb.Image = newBitmap;
+            Image image = pb.Image;
+            image.Save("C:\\Users\\User\\Documents\\GitHub\\КГ\\SWaGA", ImageFormat.Png);
+            form.ShowDialog();
         }
 
         private void CDA(int xStart, int yStart, int xEnd, int yEnd)
@@ -304,7 +332,7 @@ namespace КГ
             (0, 1),   // S                   
             };
 
-        public List<Point> ExploreContourFromBitmap(Color targetColor)
+        private List<Point> ExploreContourFromBitmap(Color targetColor)
         {
             UpdateBitmap();
 

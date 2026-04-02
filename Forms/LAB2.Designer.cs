@@ -45,12 +45,14 @@
             this.ClippingB = new System.Windows.Forms.Button();
             this.ClearB = new System.Windows.Forms.Button();
             this.AlgorithmsGB = new System.Windows.Forms.GroupBox();
+            this.CDAClipRB = new System.Windows.Forms.RadioButton();
+            this.ClipRB = new System.Windows.Forms.RadioButton();
+            this.AsymmetricCDARB = new System.Windows.Forms.RadioButton();
             this.FillingRB = new System.Windows.Forms.RadioButton();
             this.CDARB = new System.Windows.Forms.RadioButton();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
-            this.AsymmetricCDARB = new System.Windows.Forms.RadioButton();
-            this.ClipRB = new System.Windows.Forms.RadioButton();
-            this.CDAClipRB = new System.Windows.Forms.RadioButton();
+            this.TargetColorB = new System.Windows.Forms.Button();
+            this.TargetColorPB = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -60,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.FillingColorPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LineColorPB)).BeginInit();
             this.AlgorithmsGB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TargetColorPB)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -73,8 +76,10 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.TargetColorB);
             this.splitContainer1.Panel2.Controls.Add(this.ThicknessL);
             this.splitContainer1.Panel2.Controls.Add(this.ThicknessB);
+            this.splitContainer1.Panel2.Controls.Add(this.TargetColorPB);
             this.splitContainer1.Panel2.Controls.Add(this.BackgroundColorPB);
             this.splitContainer1.Panel2.Controls.Add(this.FillingColorPB);
             this.splitContainer1.Panel2.Controls.Add(this.LineColorPB);
@@ -189,6 +194,27 @@
             this.AlgorithmsGB.Name = "AlgorithmsGB";
             this.AlgorithmsGB.TabStop = false;
             // 
+            // CDAClipRB
+            // 
+            resources.ApplyResources(this.CDAClipRB, "CDAClipRB");
+            this.CDAClipRB.Name = "CDAClipRB";
+            this.CDAClipRB.TabStop = true;
+            this.CDAClipRB.UseVisualStyleBackColor = true;
+            // 
+            // ClipRB
+            // 
+            resources.ApplyResources(this.ClipRB, "ClipRB");
+            this.ClipRB.Name = "ClipRB";
+            this.ClipRB.TabStop = true;
+            this.ClipRB.UseVisualStyleBackColor = true;
+            // 
+            // AsymmetricCDARB
+            // 
+            resources.ApplyResources(this.AsymmetricCDARB, "AsymmetricCDARB");
+            this.AsymmetricCDARB.Name = "AsymmetricCDARB";
+            this.AsymmetricCDARB.TabStop = true;
+            this.AsymmetricCDARB.UseVisualStyleBackColor = true;
+            // 
             // FillingRB
             // 
             resources.ApplyResources(this.FillingRB, "FillingRB");
@@ -203,26 +229,18 @@
             this.CDARB.TabStop = true;
             this.CDARB.UseVisualStyleBackColor = true;
             // 
-            // AsymmetricCDARB
+            // TargetColorB
             // 
-            resources.ApplyResources(this.AsymmetricCDARB, "AsymmetricCDARB");
-            this.AsymmetricCDARB.Name = "AsymmetricCDARB";
-            this.AsymmetricCDARB.TabStop = true;
-            this.AsymmetricCDARB.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.TargetColorB, "TargetColorB");
+            this.TargetColorB.Name = "TargetColorB";
+            this.TargetColorB.UseVisualStyleBackColor = true;
+            this.TargetColorB.Click += new System.EventHandler(this.TargetColorB_Click);
             // 
-            // ClipRB
+            // TargetColorPB
             // 
-            resources.ApplyResources(this.ClipRB, "ClipRB");
-            this.ClipRB.Name = "ClipRB";
-            this.ClipRB.TabStop = true;
-            this.ClipRB.UseVisualStyleBackColor = true;
-            // 
-            // CDAClipRB
-            // 
-            resources.ApplyResources(this.CDAClipRB, "CDAClipRB");
-            this.CDAClipRB.Name = "CDAClipRB";
-            this.CDAClipRB.TabStop = true;
-            this.CDAClipRB.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.TargetColorPB, "TargetColorPB");
+            this.TargetColorPB.Name = "TargetColorPB";
+            this.TargetColorPB.TabStop = false;
             // 
             // LAB2
             // 
@@ -243,6 +261,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.LineColorPB)).EndInit();
             this.AlgorithmsGB.ResumeLayout(false);
             this.AlgorithmsGB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TargetColorPB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -271,5 +290,7 @@
         private System.Windows.Forms.RadioButton AsymmetricCDARB;
         private System.Windows.Forms.RadioButton ClipRB;
         private System.Windows.Forms.RadioButton CDAClipRB;
+        private System.Windows.Forms.Button TargetColorB;
+        private System.Windows.Forms.PictureBox TargetColorPB;
     }
 }

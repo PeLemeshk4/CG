@@ -135,7 +135,7 @@
     <value>0, 0</value>
   </data>
   <data name="CanvasPB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 450</value>
+    <value>445, 486</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CanvasPB.TabIndex" type="System.Int32, mscorlib">
@@ -163,6 +163,30 @@
     <value>splitContainer1</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TargetColorB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>294, 439</value>
+  </data>
+  <data name="TargetColorB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 31</value>
+  </data>
+  <data name="TargetColorB.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="TargetColorB.Text" xml:space="preserve">
+    <value>Контур</value>
+  </data>
+  <data name="&gt;&gt;TargetColorB.Name" xml:space="preserve">
+    <value>TargetColorB</value>
+  </data>
+  <data name="&gt;&gt;TargetColorB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TargetColorB.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;TargetColorB.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="ThicknessL.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -199,7 +223,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;ThicknessL.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="ThicknessB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -226,7 +250,34 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;ThicknessB.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="TargetColorPB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="TargetColorPB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="TargetColorPB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>364, 438</value>
+  </data>
+  <data name="TargetColorPB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="TargetColorPB.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;TargetColorPB.Name" xml:space="preserve">
+    <value>TargetColorPB</value>
+  </data>
+  <data name="&gt;&gt;TargetColorPB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TargetColorPB.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;TargetColorPB.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="BackgroundColorPB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -253,7 +304,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;BackgroundColorPB.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="FillingColorPB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -280,7 +331,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;FillingColorPB.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="LineColorPB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -304,7 +355,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;LineColorPB.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="ThicknessTitleL.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -340,7 +391,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;ThicknessTitleL.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="ColorTitleL.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -373,7 +424,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;ColorTitleL.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="BackgroundColorB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -403,7 +454,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;BackgroundColorB.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="FillingColorB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -433,7 +484,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;FillingColorB.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="LineColorB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -463,7 +514,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;LineColorB.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="BypassB.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11.25pt</value>
@@ -493,7 +544,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;BypassB.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="ClippingB.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -523,7 +574,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;ClippingB.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="ClearB.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -550,7 +601,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;ClearB.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="CDAClipRB.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -715,7 +766,7 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;AlgorithmsGB.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
@@ -730,7 +781,7 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>860, 450</value>
+    <value>860, 486</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
     <value>445</value>
@@ -760,7 +811,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>860, 450</value>
+    <value>860, 486</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Растровые алгоритмы</value>
