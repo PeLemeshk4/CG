@@ -17,15 +17,21 @@ namespace КГ
             InitializeComponent();
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void Lab1B_Click(object sender, EventArgs e)
         {
             LAB1 form = new LAB1();
             form.ShowDialog();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void Lab2B_Click(object sender, EventArgs e)
         {
-
+            LAB2 form = new LAB2();
+            form.ShowDialog();
         }
     }
 }

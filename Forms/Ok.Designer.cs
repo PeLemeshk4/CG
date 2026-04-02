@@ -51,6 +51,7 @@
             this.Name = "Ok";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ok";
+            this.Load += new System.EventHandler(this.Ok_Load);
             this.ResumeLayout(false);
 
         }

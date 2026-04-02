@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="CanvasPB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="CanvasPB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CanvasPB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="CanvasPB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 450</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CanvasPB.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;CanvasPB.Name" xml:space="preserve">
+    <value>CanvasPB</value>
+  </data>
+  <data name="&gt;&gt;CanvasPB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CanvasPB.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;CanvasPB.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ThicknessL.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="ThicknessL.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ThicknessL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="ThicknessL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ThicknessL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>364, 280</value>
+  </data>
+  <data name="ThicknessL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 20</value>
+  </data>
+  <data name="ThicknessL.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="ThicknessL.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ThicknessL.Name" xml:space="preserve">
+    <value>ThicknessL</value>
+  </data>
+  <data name="&gt;&gt;ThicknessL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ThicknessL.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;ThicknessL.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ThicknessB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="ThicknessB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>294, 275</value>
+  </data>
+  <data name="ThicknessB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 32</value>
+  </data>
+  <data name="ThicknessB.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ThicknessB.Text" xml:space="preserve">
+    <value>Толщина</value>
+  </data>
+  <data name="&gt;&gt;ThicknessB.Name" xml:space="preserve">
+    <value>ThicknessB</value>
+  </data>
+  <data name="&gt;&gt;ThicknessB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ThicknessB.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;ThicknessB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BackgroundColorPB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="BackgroundColorPB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BackgroundColorPB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>364, 402</value>
+  </data>
+  <data name="BackgroundColorPB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="BackgroundColorPB.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;BackgroundColorPB.Name" xml:space="preserve">
+    <value>BackgroundColorPB</value>
+  </data>
+  <data name="&gt;&gt;BackgroundColorPB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BackgroundColorPB.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;BackgroundColorPB.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="FillingColorPB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="FillingColorPB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="FillingColorPB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>364, 364</value>
+  </data>
+  <data name="FillingColorPB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="FillingColorPB.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;FillingColorPB.Name" xml:space="preserve">
+    <value>FillingColorPB</value>
+  </data>
+  <data name="&gt;&gt;FillingColorPB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FillingColorPB.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;FillingColorPB.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LineColorPB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="LineColorPB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>364, 328</value>
+  </data>
+  <data name="LineColorPB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 30</value>
+  </data>
+  <data name="LineColorPB.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;LineColorPB.Name" xml:space="preserve">
+    <value>LineColorPB</value>
+  </data>
+  <data name="&gt;&gt;LineColorPB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LineColorPB.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;LineColorPB.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ThicknessTitleL.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="ThicknessTitleL.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ThicknessTitleL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="ThicknessTitleL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ThicknessTitleL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 252</value>
+  </data>
+  <data name="ThicknessTitleL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 20</value>
+  </data>
+  <data name="ThicknessTitleL.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ThicknessTitleL.Text" xml:space="preserve">
+    <value>Толщина</value>
+  </data>
+  <data name="&gt;&gt;ThicknessTitleL.Name" xml:space="preserve">
+    <value>ThicknessTitleL</value>
+  </data>
+  <data name="&gt;&gt;ThicknessTitleL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ThicknessTitleL.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;ThicknessTitleL.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ColorTitleL.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="ColorTitleL.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ColorTitleL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="ColorTitleL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 305</value>
+  </data>
+  <data name="ColorTitleL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="ColorTitleL.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ColorTitleL.Text" xml:space="preserve">
+    <value>Цвет</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleL.Name" xml:space="preserve">
+    <value>ColorTitleL</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleL.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleL.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="BackgroundColorB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="BackgroundColorB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BackgroundColorB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>294, 402</value>
+  </data>
+  <data name="BackgroundColorB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 31</value>
+  </data>
+  <data name="BackgroundColorB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="BackgroundColorB.Text" xml:space="preserve">
+    <value>Фон</value>
+  </data>
+  <data name="&gt;&gt;BackgroundColorB.Name" xml:space="preserve">
+    <value>BackgroundColorB</value>
+  </data>
+  <data name="&gt;&gt;BackgroundColorB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BackgroundColorB.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;BackgroundColorB.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="FillingColorB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="FillingColorB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="FillingColorB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>294, 365</value>
+  </data>
+  <data name="FillingColorB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 31</value>
+  </data>
+  <data name="FillingColorB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="FillingColorB.Text" xml:space="preserve">
+    <value>Заливка</value>
+  </data>
+  <data name="&gt;&gt;FillingColorB.Name" xml:space="preserve">
+    <value>FillingColorB</value>
+  </data>
+  <data name="&gt;&gt;FillingColorB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FillingColorB.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;FillingColorB.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="LineColorB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="LineColorB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LineColorB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>294, 328</value>
+  </data>
+  <data name="LineColorB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 31</value>
+  </data>
+  <data name="LineColorB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="LineColorB.Text" xml:space="preserve">
+    <value>Линия</value>
+  </data>
+  <data name="&gt;&gt;LineColorB.Name" xml:space="preserve">
+    <value>LineColorB</value>
+  </data>
+  <data name="&gt;&gt;LineColorB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LineColorB.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;LineColorB.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="BypassB.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="BypassB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BypassB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 252</value>
+  </data>
+  <data name="BypassB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 64</value>
+  </data>
+  <data name="BypassB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="BypassB.Text" xml:space="preserve">
+    <value>Обход сложного контура</value>
+  </data>
+  <data name="&gt;&gt;BypassB.Name" xml:space="preserve">
+    <value>BypassB</value>
+  </data>
+  <data name="&gt;&gt;BypassB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BypassB.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;BypassB.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ClippingB.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="ClippingB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ClippingB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 322</value>
+  </data>
+  <data name="ClippingB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 64</value>
+  </data>
+  <data name="ClippingB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ClippingB.Text" xml:space="preserve">
+    <value>Отсечение</value>
+  </data>
+  <data name="&gt;&gt;ClippingB.Name" xml:space="preserve">
+    <value>ClippingB</value>
+  </data>
+  <data name="&gt;&gt;ClippingB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ClippingB.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;ClippingB.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="ClearB.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="ClearB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 252</value>
+  </data>
+  <data name="ClearB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 64</value>
+  </data>
+  <data name="ClearB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ClearB.Text" xml:space="preserve">
+    <value>Очистить</value>
+  </data>
+  <data name="&gt;&gt;ClearB.Name" xml:space="preserve">
+    <value>ClearB</value>
+  </data>
+  <data name="&gt;&gt;ClearB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ClearB.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;ClearB.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="CDAClipRB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CDAClipRB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 149</value>
+  </data>
+  <data name="CDAClipRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 24</value>
+  </data>
+  <data name="CDAClipRB.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="CDAClipRB.Text" xml:space="preserve">
+    <value>ЦДА с отсечением</value>
+  </data>
+  <data name="&gt;&gt;CDAClipRB.Name" xml:space="preserve">
+    <value>CDAClipRB</value>
+  </data>
+  <data name="&gt;&gt;CDAClipRB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CDAClipRB.Parent" xml:space="preserve">
+    <value>AlgorithmsGB</value>
+  </data>
+  <data name="&gt;&gt;CDAClipRB.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ClipRB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ClipRB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 118</value>
+  </data>
+  <data name="ClipRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 24</value>
+  </data>
+  <data name="ClipRB.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ClipRB.Text" xml:space="preserve">
+    <value>Двумерное отсечение</value>
+  </data>
+  <data name="&gt;&gt;ClipRB.Name" xml:space="preserve">
+    <value>ClipRB</value>
+  </data>
+  <data name="&gt;&gt;ClipRB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ClipRB.Parent" xml:space="preserve">
+    <value>AlgorithmsGB</value>
+  </data>
+  <data name="&gt;&gt;ClipRB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="AsymmetricCDARB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AsymmetricCDARB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 88</value>
+  </data>
+  <data name="AsymmetricCDARB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 24</value>
+  </data>
+  <data name="AsymmetricCDARB.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="AsymmetricCDARB.Text" xml:space="preserve">
+    <value>Асимметричный ЦДА</value>
+  </data>
+  <data name="&gt;&gt;AsymmetricCDARB.Name" xml:space="preserve">
+    <value>AsymmetricCDARB</value>
+  </data>
+  <data name="&gt;&gt;AsymmetricCDARB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AsymmetricCDARB.Parent" xml:space="preserve">
+    <value>AlgorithmsGB</value>
+  </data>
+  <data name="&gt;&gt;AsymmetricCDARB.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="FillingRB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FillingRB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 57</value>
+  </data>
+  <data name="FillingRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 24</value>
+  </data>
+  <data name="FillingRB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="FillingRB.Text" xml:space="preserve">
+    <value>Заливка</value>
+  </data>
+  <data name="&gt;&gt;FillingRB.Name" xml:space="preserve">
+    <value>FillingRB</value>
+  </data>
+  <data name="&gt;&gt;FillingRB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FillingRB.Parent" xml:space="preserve">
+    <value>AlgorithmsGB</value>
+  </data>
+  <data name="&gt;&gt;FillingRB.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CDARB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CDARB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 26</value>
+  </data>
+  <data name="CDARB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 24</value>
+  </data>
+  <data name="CDARB.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="CDARB.Text" xml:space="preserve">
+    <value>Обычный ЦДА</value>
+  </data>
+  <data name="&gt;&gt;CDARB.Name" xml:space="preserve">
+    <value>CDARB</value>
+  </data>
+  <data name="&gt;&gt;CDARB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CDARB.Parent" xml:space="preserve">
+    <value>AlgorithmsGB</value>
+  </data>
+  <data name="&gt;&gt;CDARB.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="AlgorithmsGB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="AlgorithmsGB.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="AlgorithmsGB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="AlgorithmsGB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 245</value>
+  </data>
+  <data name="AlgorithmsGB.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AlgorithmsGB.Text" xml:space="preserve">
+    <value>Выберите алгоритм</value>
+  </data>
+  <data name="&gt;&gt;AlgorithmsGB.Name" xml:space="preserve">
+    <value>AlgorithmsGB</value>
+  </data>
+  <data name="&gt;&gt;AlgorithmsGB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AlgorithmsGB.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;AlgorithmsGB.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>860, 450</value>
+  </data>
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>445</value>
+  </data>
+  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="colorDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>860, 450</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Растровые алгоритмы</value>
+  </data>
+  <data name="&gt;&gt;colorDialog.Name" xml:space="preserve">
+    <value>colorDialog</value>
+  </data>
+  <data name="&gt;&gt;colorDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>LAB2</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

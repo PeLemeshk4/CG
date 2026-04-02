@@ -11,3 +11,8 @@ C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.pdb
 C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.exe.config
 C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.LAB1.resources
 C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.Ok.resources
+C:\Users\User\Documents\GitHub\КГ\bin\Debug\lkt-US\КГ.resources.dll
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\lkt-US\КГ.resources.dll
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.LAB2.resources
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.LAB2.lkt-US.resources
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.Forms.EnterNumber.resources

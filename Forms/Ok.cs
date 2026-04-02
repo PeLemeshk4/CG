@@ -21,5 +21,10 @@ namespace КГ
         {
             DialogResult = DialogResult.OK;
         }
+
+        private void Ok_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

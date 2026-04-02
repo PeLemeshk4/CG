@@ -52,6 +52,7 @@
             this.Lab2B.TabIndex = 0;
             this.Lab2B.Text = "LAB2";
             this.Lab2B.UseVisualStyleBackColor = true;
+            this.Lab2B.Click += new System.EventHandler(this.Lab2B_Click);
             // 
             // Lab4B
             // 
