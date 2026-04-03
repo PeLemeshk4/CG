@@ -1,30 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\",
+  "WorkspaceRootPath": "D:\\Visual studio 2022 projects\\CG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\forms\\lab2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|solutionrelative:forms\\lab2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|c:\\users\\user\\documents\\github\\\u043A\u0433\\forms\\lab2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|d:\\visual studio 2022 projects\\cg\\forms\\lab2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|solutionrelative:forms\\lab2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\forms\\lab1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|D:\\Visual studio 2022 projects\\CG\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|D:\\Visual studio 2022 projects\\CG\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|D:\\Visual studio 2022 projects\\CG\\forms\\lab1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|solutionrelative:forms\\lab1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\forms\\lab1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|solutionrelative:forms\\lab1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|D:\\Visual studio 2022 projects\\CG\\forms\\lab2.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|solutionrelative:forms\\lab2.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|D:\\Visual studio 2022 projects\\CG\\forms\\lab2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|solutionrelative:forms\\lab2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|D:\\Visual studio 2022 projects\\CG\\forms\\lab2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|solutionrelative:forms\\lab2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|D:\\Visual studio 2022 projects\\CG\\forms\\lab1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EDB75FE-F07F-4A03-BCDF-10C995FD4B84}|\u041A\u0413.csproj|solutionrelative:forms\\lab1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,52 +42,51 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LAB2.Designer.cs",
+              "DocumentMoniker": "D:\\Visual studio 2022 projects\\CG\\Forms\\LAB2.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\LAB2.Designer.cs",
+              "ToolTip": "D:\\Visual studio 2022 projects\\CG\\Forms\\LAB2.Designer.cs",
+              "RelativeToolTip": "Forms\\LAB2.Designer.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAYwBYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T09:44:18.389Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "LAB2.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\Forms\\LAB2.cs",
+              "DocumentMoniker": "D:\\Visual studio 2022 projects\\CG\\Forms\\LAB2.cs",
               "RelativeDocumentMoniker": "Forms\\LAB2.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\Forms\\LAB2.cs",
+              "ToolTip": "D:\\Visual studio 2022 projects\\CG\\Forms\\LAB2.cs",
               "RelativeToolTip": "Forms\\LAB2.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAswMEAAABZAAAAAAAAAA==",
+              "ViewState": "AgIAAIYBAAAAAAAAAAAqwKsBAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-02T10:26:27.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "LAB2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\Forms\\LAB2.cs",
+              "DocumentMoniker": "D:\\Visual studio 2022 projects\\CG\\Forms\\LAB2.cs",
               "RelativeDocumentMoniker": "Forms\\LAB2.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\Forms\\LAB2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "D:\\Visual studio 2022 projects\\CG\\Forms\\LAB2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "Forms\\LAB2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T10:22:28.575Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2026-04-02T10:22:28.575Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\Forms\\MainForm.cs",
+              "DocumentMoniker": "D:\\Visual studio 2022 projects\\CG\\Forms\\MainForm.cs",
               "RelativeDocumentMoniker": "Forms\\MainForm.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\Forms\\MainForm.cs",
+              "ToolTip": "D:\\Visual studio 2022 projects\\CG\\Forms\\MainForm.cs",
               "RelativeToolTip": "Forms\\MainForm.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAADwvyAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -88,11 +95,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\Forms\\MainForm.cs",
+              "DocumentMoniker": "D:\\Visual studio 2022 projects\\CG\\Forms\\MainForm.cs",
               "RelativeDocumentMoniker": "Forms\\MainForm.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\Forms\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "D:\\Visual studio 2022 projects\\CG\\Forms\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "Forms\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-02T10:22:05.084Z",
@@ -100,44 +107,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "LAB1.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\Forms\\LAB1.cs",
+              "DocumentMoniker": "D:\\Visual studio 2022 projects\\CG\\Forms\\LAB1.cs",
               "RelativeDocumentMoniker": "Forms\\LAB1.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\Forms\\LAB1.cs",
+              "ToolTip": "D:\\Visual studio 2022 projects\\CG\\Forms\\LAB1.cs",
               "RelativeToolTip": "Forms\\LAB1.cs",
               "ViewState": "AgIAAP8AAAAAAAAAAAAgwLoAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T10:45:21.19Z"
+              "WhenOpened": "2026-04-02T10:45:21.19Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "LAB1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\Forms\\LAB1.cs",
+              "DocumentMoniker": "D:\\Visual studio 2022 projects\\CG\\Forms\\LAB1.cs",
               "RelativeDocumentMoniker": "Forms\\LAB1.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\\u041A\u0413\\Forms\\LAB1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "D:\\Visual studio 2022 projects\\CG\\Forms\\LAB1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "Forms\\LAB1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T10:21:16.154Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 321,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "WhenOpened": "2026-04-02T10:21:16.154Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{4a9b7e51-aa16-11d0-a8c5-00a0c921a4d2}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LAB2.resx",
+              "DocumentMoniker": "D:\\Visual studio 2022 projects\\CG\\Forms\\LAB2.resx",
+              "RelativeDocumentMoniker": "Forms\\LAB2.resx",
+              "ToolTip": "D:\\Visual studio 2022 projects\\CG\\Forms\\LAB2.resx",
+              "RelativeToolTip": "Forms\\LAB2.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-04-03T09:46:03.366Z"
             }
           ]
         }

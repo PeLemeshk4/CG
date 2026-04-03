@@ -191,7 +191,7 @@ namespace КГ
             }
             pb.Image = newBitmap;
             Image image = pb.Image;
-            image.Save("C:\\Users\\User\\Documents\\GitHub\\КГ\\SWaGA", ImageFormat.Png);
+            image.Save("..\\..\\SWaGA.png", ImageFormat.Png);
             form.ShowDialog();
         }
 
@@ -234,6 +234,8 @@ namespace КГ
             {
                 for (int x = startX; x <= endX; x++)
                 {
+                    if (CDAClipRB.Checked == true && hasScreen && (x < xMin || x > xMax || y < yMin || y > yMax)) continue;
+
                     if (x >= 0 && x < bitmap.Width && y >= 0 && y < bitmap.Height)
                     {
                         bitmap.SetPixel(x, y, lineColor);

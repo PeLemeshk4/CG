@@ -16,3 +16,21 @@ C:\Users\User\Documents\GitHub\КГ\obj\Debug\lkt-US\КГ.resources.dll
 C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.LAB2.resources
 C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.LAB2.lkt-US.resources
 C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.Forms.EnterNumber.resources
+D:\Visual studio 2022 projects\CG\bin\Debug\КГ.exe.config
+D:\Visual studio 2022 projects\CG\bin\Debug\КГ.exe
+D:\Visual studio 2022 projects\CG\bin\Debug\КГ.pdb
+D:\Visual studio 2022 projects\CG\bin\Debug\lkt-US\КГ.resources.dll
+D:\Visual studio 2022 projects\CG\obj\Debug\КГ.csproj.AssemblyReference.cache
+D:\Visual studio 2022 projects\CG\obj\Debug\КГ.exe.config
+D:\Visual studio 2022 projects\CG\obj\Debug\КГ.Forms.EnterNumber.resources
+D:\Visual studio 2022 projects\CG\obj\Debug\КГ.LAB1.resources
+D:\Visual studio 2022 projects\CG\obj\Debug\КГ.LAB2.resources
+D:\Visual studio 2022 projects\CG\obj\Debug\КГ.MainForm.resources
+D:\Visual studio 2022 projects\CG\obj\Debug\КГ.Ok.resources
+D:\Visual studio 2022 projects\CG\obj\Debug\КГ.Properties.Resources.resources
+D:\Visual studio 2022 projects\CG\obj\Debug\КГ.LAB2.lkt-US.resources
+D:\Visual studio 2022 projects\CG\obj\Debug\КГ.csproj.GenerateResource.cache
+D:\Visual studio 2022 projects\CG\obj\Debug\КГ.csproj.CoreCompileInputs.cache
+D:\Visual studio 2022 projects\CG\obj\Debug\lkt-US\КГ.resources.dll
+D:\Visual studio 2022 projects\CG\obj\Debug\КГ.exe
+D:\Visual studio 2022 projects\CG\obj\Debug\КГ.pdb
