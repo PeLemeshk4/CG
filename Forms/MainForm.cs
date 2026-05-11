@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using КГ.Forms;
 
 namespace КГ
 {
@@ -31,6 +32,12 @@ namespace КГ
         private void Lab2B_Click(object sender, EventArgs e)
         {
             LAB2 form = new LAB2();
+            form.ShowDialog();
+        }
+
+        private void Lab3B_Click(object sender, EventArgs e)
+        {
+            LAB3 form = new LAB3();
             form.ShowDialog();
         }
     }

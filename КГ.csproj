@@ -64,6 +64,12 @@
     <Compile Include="Forms\LAB2.Designer.cs">
       <DependentUpon>LAB2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LAB3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LAB3.Designer.cs">
+      <DependentUpon>LAB3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LAB2.resx">
       <DependentUpon>LAB2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LAB3.resx">
+      <DependentUpon>LAB3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
