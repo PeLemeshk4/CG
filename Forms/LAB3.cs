@@ -54,11 +54,8 @@ namespace КГ.Forms
                 float originalWidth = textSize.Width;
                 float originalHeight = textSize.Height;
 
-                float cosA = (float)Math.Abs(Math.Cos(angle));
-                float sinA = (float)Math.Abs(Math.Sin(angle));
-
-                int width = (int)Math.Ceiling(originalWidth * cosA + originalHeight * sinA);
-                int height = (int)Math.Ceiling(originalWidth * sinA + originalHeight * cosA);
+                int width = (int)Math.Ceiling(originalWidth * originalWidth / originalHeight);
+                int height = (int)Math.Ceiling(originalHeight * originalWidth / originalHeight);
 
                 Bitmap textBmp = new Bitmap(width, height);
 
