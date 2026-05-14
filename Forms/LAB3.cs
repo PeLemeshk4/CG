@@ -70,10 +70,11 @@ namespace КГ.Forms
             bmp = new Bitmap(clearedBmp);
         }
 
-        private Bitmap DrawText(string text, Font font, Color color, float angle)
+        private Bitmap DrawText()
         {
             if (text == "") return new Bitmap(1, 1);
 
+            Font font = new Font("Arial", (int)(size * scale));
             Bitmap measureBmp = new Bitmap(1, 1);
             using (Graphics measureG = Graphics.FromImage(measureBmp))
             {
@@ -103,18 +104,20 @@ namespace КГ.Forms
                     g.DrawString(text, font, new SolidBrush(color), offsetX, offsetY);
                 }
 
-                textBmp = MakeShear(textBmp, shear);
+                if (shear != 0)
+                {
+                    textBmp = MakeShear(textBmp);
+                }
 
                 return textBmp;
             }
         }
 
-        private Bitmap MakeShear(Bitmap textBmp, float shear)
+        private Bitmap MakeShear(Bitmap textBmp)
         {
             int width = textBmp.Width;
             int height = textBmp.Height;
 
-            // Применяем прямое преобразование к углам, чтобы найти новый bounding box
             var corners = new[] {
             new Point(0, 0),
             new Point(width, 0),
@@ -126,13 +129,11 @@ namespace КГ.Forms
             for (int i = 0; i < 4; i++)
             {
                 var p = corners[i];
-                // Горизонтальный сдвиг: x' = x + shearX * y, y' = y
                 double newX = p.X + shear * p.Y;
                 double newY = p.Y;
                 transformedCorners[i] = new Point((int)Math.Round(newX), (int)Math.Round(newY));
             }
 
-            // Находим границы нового изображения
             int minX = int.MaxValue, minY = int.MaxValue;
             int maxX = int.MinValue, maxY = int.MinValue;
             foreach (var p in transformedCorners)
@@ -146,69 +147,29 @@ namespace КГ.Forms
             int newWidth = maxX - minX + 1;
             int newHeight = maxY - minY + 1;
 
-            // Создаём новое изображение с прозрачным фоном (32bppArgb)
             Bitmap newBitmap = new Bitmap(newWidth, newHeight, PixelFormat.Format32bppArgb);
             using (Graphics g = Graphics.FromImage(newBitmap))
             {
                 g.Clear(Color.Transparent);
             }
 
-            // --- ОПТИМИЗАЦИЯ: LockBits для прямого доступа к памяти ---
-            Rectangle rect = new Rectangle(0, 0, newWidth, newHeight);
-            BitmapData newBitmapData = newBitmap.LockBits(rect, ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
-
-            Rectangle originalRect = new Rectangle(0, 0, width, height);
-            BitmapData originalBitmapData = textBmp.LockBits(originalRect, ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
-
-            int bytesPerPixel = 4; // 32bppArgb = 4 байта на пиксель
-            int strideNew = newBitmapData.Stride;
-            int strideOriginal = originalBitmapData.Stride;
-
-            unsafe
+            for (int newY = 0; newY < newHeight; newY++)
             {
-                byte* ptrNew = (byte*)newBitmapData.Scan0.ToPointer();
-                byte* ptrOriginal = (byte*)originalBitmapData.Scan0.ToPointer();
-
-                double det = 1.0; // Для shearX только — детерминант = 1
-
-                for (int y = 0; y < newHeight; y++)
+                for (int newX = 0; newX < newWidth; newX++)
                 {
-                    for (int x = 0; x < newWidth; x++)
+                    double xPrime = newX + minX;
+                    double yPrime = newY + minY;
+
+                    double originalX = xPrime - shear * yPrime;
+                    double originalY = yPrime;
+
+                    if (originalX >= 0 && originalX < width && originalY >= 0 && originalY < height)
                     {
-                        // Координата в "сдвинутой" системе
-                        double xPrime = x + minX;
-                        double yPrime = y + minY;
-
-                        // Обратное преобразование: x = x' - shearX * y', y = y'
-                        double originalX = xPrime - shear * yPrime;
-                        double originalY = yPrime;
-
-                        // Проверяем, попадает ли точка в исходное изображение
-                        if (originalX >= 0 && originalX < width && originalY >= 0 && originalY < height)
-                        {
-                            int srcX = (int)originalX;
-                            int srcY = (int)originalY;
-
-                            // Смещение в байтах для исходного изображения
-                            int srcOffset = srcY * strideOriginal + srcX * bytesPerPixel;
-
-                            // Смещение в байтах для нового изображения
-                            int dstOffset = y * strideNew + x * bytesPerPixel;
-
-                            // Копируем 4 байта (BGRA)
-                            ptrNew[dstOffset + 0] = ptrOriginal[srcOffset + 0]; // B
-                            ptrNew[dstOffset + 1] = ptrOriginal[srcOffset + 1]; // G
-                            ptrNew[dstOffset + 2] = ptrOriginal[srcOffset + 2]; // R
-                            ptrNew[dstOffset + 3] = ptrOriginal[srcOffset + 3]; // A
-                        }
-                        // Иначе остаётся прозрачным (по умолчанию — 0,0,0,0)
+                        Color pixelColor = textBmp.GetPixel((int)originalX, (int)originalY);
+                        newBitmap.SetPixel(newX, newY, pixelColor);
                     }
                 }
             }
-
-            // Разблокируем биты
-            newBitmap.UnlockBits(newBitmapData);
-            textBmp.UnlockBits(originalBitmapData);
 
             return newBitmap;
         }
@@ -216,6 +177,7 @@ namespace КГ.Forms
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         { 
             textPosition = new Point(e.X, e.Y);
+
             UpdatePb();
         }
 
@@ -232,7 +194,7 @@ namespace КГ.Forms
             ClearBmp();
             using (Graphics g = Graphics.FromImage(bmp))
             {
-                Bitmap textBmp = DrawText(text, new Font("Arial", (int)(size * scale)), color, angle);
+                Bitmap textBmp = DrawText();
                 int drawX = (int)(textPosition.X - textBmp.Width / 2f);
                 int drawY = (int)(textPosition.Y - textBmp.Height / 2f);
                 g.DrawImage(textBmp, drawX, drawY);
