@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TextTB = new System.Windows.Forms.TextBox();
@@ -39,6 +40,15 @@
             this.ColorB = new System.Windows.Forms.Button();
             this.SizeL = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.ScaleNUP = new System.Windows.Forms.NumericUpDown();
+            this.ScaleL = new System.Windows.Forms.Label();
+            this.SpaceShipB = new System.Windows.Forms.Button();
+            this.RandomB = new System.Windows.Forms.Button();
+            this.StartStopRotationB = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.AngleIncrementNUP = new System.Windows.Forms.NumericUpDown();
+            this.ShearNUP = new System.Windows.Forms.NumericUpDown();
+            this.ShearL = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -46,13 +56,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AngleNUP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SizeNUP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ScaleNUP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AngleIncrementNUP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShearNUP)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -61,6 +74,14 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.ShearL);
+            this.splitContainer1.Panel2.Controls.Add(this.ShearNUP);
+            this.splitContainer1.Panel2.Controls.Add(this.AngleIncrementNUP);
+            this.splitContainer1.Panel2.Controls.Add(this.StartStopRotationB);
+            this.splitContainer1.Panel2.Controls.Add(this.RandomB);
+            this.splitContainer1.Panel2.Controls.Add(this.SpaceShipB);
+            this.splitContainer1.Panel2.Controls.Add(this.ScaleL);
+            this.splitContainer1.Panel2.Controls.Add(this.ScaleNUP);
             this.splitContainer1.Panel2.Controls.Add(this.TextTB);
             this.splitContainer1.Panel2.Controls.Add(this.AngleNUP);
             this.splitContainer1.Panel2.Controls.Add(this.SizeNUP);
@@ -78,7 +99,7 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(435, 448);
             this.pictureBox1.TabIndex = 0;
@@ -89,7 +110,7 @@
             // 
             this.TextTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TextTB.Location = new System.Drawing.Point(68, 115);
-            this.TextTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextTB.Margin = new System.Windows.Forms.Padding(2);
             this.TextTB.Name = "TextTB";
             this.TextTB.Size = new System.Drawing.Size(92, 26);
             this.TextTB.TabIndex = 6;
@@ -99,7 +120,7 @@
             // 
             this.AngleNUP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AngleNUP.Location = new System.Drawing.Point(68, 86);
-            this.AngleNUP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AngleNUP.Margin = new System.Windows.Forms.Padding(2);
             this.AngleNUP.Maximum = new decimal(new int[] {
             360,
             0,
@@ -114,7 +135,7 @@
             // 
             this.SizeNUP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SizeNUP.Location = new System.Drawing.Point(68, 24);
-            this.SizeNUP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SizeNUP.Margin = new System.Windows.Forms.Padding(2);
             this.SizeNUP.Minimum = new decimal(new int[] {
             1,
             0,
@@ -167,7 +188,7 @@
             // 
             this.ColorB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ColorB.Location = new System.Drawing.Point(68, 53);
-            this.ColorB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ColorB.Margin = new System.Windows.Forms.Padding(2);
             this.ColorB.Name = "ColorB";
             this.ColorB.Size = new System.Drawing.Size(91, 28);
             this.ColorB.TabIndex = 2;
@@ -185,13 +206,149 @@
             this.SizeL.TabIndex = 1;
             this.SizeL.Text = "Size:";
             // 
+            // ScaleNUP
+            // 
+            this.ScaleNUP.DecimalPlaces = 1;
+            this.ScaleNUP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ScaleNUP.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.ScaleNUP.Location = new System.Drawing.Point(68, 147);
+            this.ScaleNUP.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.ScaleNUP.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.ScaleNUP.Name = "ScaleNUP";
+            this.ScaleNUP.Size = new System.Drawing.Size(92, 26);
+            this.ScaleNUP.TabIndex = 7;
+            this.ScaleNUP.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.ScaleNUP.ValueChanged += new System.EventHandler(this.ScaleNUP_ValueChanged);
+            // 
+            // ScaleL
+            // 
+            this.ScaleL.AutoSize = true;
+            this.ScaleL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ScaleL.Location = new System.Drawing.Point(8, 149);
+            this.ScaleL.Name = "ScaleL";
+            this.ScaleL.Size = new System.Drawing.Size(53, 20);
+            this.ScaleL.TabIndex = 8;
+            this.ScaleL.Text = "Scale:";
+            // 
+            // SpaceShipB
+            // 
+            this.SpaceShipB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SpaceShipB.Location = new System.Drawing.Point(12, 380);
+            this.SpaceShipB.Name = "SpaceShipB";
+            this.SpaceShipB.Size = new System.Drawing.Size(185, 56);
+            this.SpaceShipB.TabIndex = 9;
+            this.SpaceShipB.Text = "Space Ship By #avice";
+            this.SpaceShipB.UseVisualStyleBackColor = true;
+            this.SpaceShipB.Click += new System.EventHandler(this.SpaceShipB_Click);
+            // 
+            // RandomB
+            // 
+            this.RandomB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RandomB.Location = new System.Drawing.Point(7, 179);
+            this.RandomB.Name = "RandomB";
+            this.RandomB.Size = new System.Drawing.Size(195, 52);
+            this.RandomB.TabIndex = 10;
+            this.RandomB.Text = "Random Size and Color";
+            this.RandomB.UseVisualStyleBackColor = true;
+            this.RandomB.Click += new System.EventHandler(this.RandomB_Click);
+            // 
+            // StartStopRotationB
+            // 
+            this.StartStopRotationB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StartStopRotationB.Location = new System.Drawing.Point(7, 237);
+            this.StartStopRotationB.Name = "StartStopRotationB";
+            this.StartStopRotationB.Size = new System.Drawing.Size(140, 57);
+            this.StartStopRotationB.TabIndex = 11;
+            this.StartStopRotationB.Text = "Start Rotating";
+            this.StartStopRotationB.UseVisualStyleBackColor = true;
+            this.StartStopRotationB.Click += new System.EventHandler(this.StartStopRotationB_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // AngleIncrementNUP
+            // 
+            this.AngleIncrementNUP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AngleIncrementNUP.Location = new System.Drawing.Point(154, 249);
+            this.AngleIncrementNUP.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.AngleIncrementNUP.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.AngleIncrementNUP.Name = "AngleIncrementNUP";
+            this.AngleIncrementNUP.Size = new System.Drawing.Size(43, 31);
+            this.AngleIncrementNUP.TabIndex = 12;
+            this.AngleIncrementNUP.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.AngleIncrementNUP.ValueChanged += new System.EventHandler(this.AngleIncrementNUP_ValueChanged);
+            // 
+            // ShearNUP
+            // 
+            this.ShearNUP.DecimalPlaces = 1;
+            this.ShearNUP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ShearNUP.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.ShearNUP.Location = new System.Drawing.Point(69, 300);
+            this.ShearNUP.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.ShearNUP.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.ShearNUP.Name = "ShearNUP";
+            this.ShearNUP.Size = new System.Drawing.Size(91, 26);
+            this.ShearNUP.TabIndex = 13;
+            this.ShearNUP.ValueChanged += new System.EventHandler(this.ShearNUP_ValueChanged);
+            // 
+            // ShearL
+            // 
+            this.ShearL.AutoSize = true;
+            this.ShearL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ShearL.Location = new System.Drawing.Point(9, 302);
+            this.ShearL.Name = "ShearL";
+            this.ShearL.Size = new System.Drawing.Size(56, 20);
+            this.ShearL.TabIndex = 14;
+            this.ShearL.Text = "Shear:";
+            // 
             // LAB3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(647, 448);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LAB3";
             this.Text = "LAB3";
             this.Load += new System.EventHandler(this.LAB3_Load);
@@ -203,6 +360,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AngleNUP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SizeNUP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ScaleNUP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AngleIncrementNUP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShearNUP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,5 +380,14 @@
         private System.Windows.Forms.Label TextL;
         private System.Windows.Forms.Label AngleL;
         private System.Windows.Forms.TextBox TextTB;
+        private System.Windows.Forms.Label ScaleL;
+        private System.Windows.Forms.NumericUpDown ScaleNUP;
+        private System.Windows.Forms.Button SpaceShipB;
+        private System.Windows.Forms.Button RandomB;
+        private System.Windows.Forms.Button StartStopRotationB;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.NumericUpDown AngleIncrementNUP;
+        private System.Windows.Forms.Label ShearL;
+        private System.Windows.Forms.NumericUpDown ShearNUP;
     }
 }
