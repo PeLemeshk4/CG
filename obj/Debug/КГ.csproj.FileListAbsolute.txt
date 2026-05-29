@@ -35,5 +35,6 @@ D:\Visual studio 2022 projects\CG\obj\Debug\lkt-US\КГ.resources.dll
 D:\Visual studio 2022 projects\CG\obj\Debug\КГ.exe
 D:\Visual studio 2022 projects\CG\obj\Debug\КГ.pdb
 D:\Visual studio 2022 projects\CG\obj\Debug\КГ.Forms.LAB3.resources
-C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.Forms.LAB3.resources
 C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.Forms.SpaceShip.resources
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.Forms.LAB3.resources
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.Forms.LAB4.resources

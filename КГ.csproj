@@ -71,6 +71,12 @@
     <Compile Include="Forms\LAB3.Designer.cs">
       <DependentUpon>LAB3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LAB4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LAB4.Designer.cs">
+      <DependentUpon>LAB4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,7 @@
     <Compile Include="Forms\SpaceShip.Designer.cs">
       <DependentUpon>SpaceShip.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Letter3D.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\EnterNumber.resx">
@@ -105,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LAB3.resx">
       <DependentUpon>LAB3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LAB4.resx">
+      <DependentUpon>LAB4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

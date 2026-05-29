@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LAB3));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ShearL = new System.Windows.Forms.Label();
@@ -38,12 +37,8 @@
             this.StartStopRotationB = new System.Windows.Forms.Button();
             this.RandomB = new System.Windows.Forms.Button();
             this.SpaceShipB = new System.Windows.Forms.Button();
-            this.ScaleL = new System.Windows.Forms.Label();
-            this.ScaleNUP = new System.Windows.Forms.NumericUpDown();
-            this.TextTB = new System.Windows.Forms.TextBox();
             this.AngleNUP = new System.Windows.Forms.NumericUpDown();
             this.SizeNUP = new System.Windows.Forms.NumericUpDown();
-            this.TextL = new System.Windows.Forms.Label();
             this.AngleL = new System.Windows.Forms.Label();
             this.ColorL = new System.Windows.Forms.Label();
             this.ColorB = new System.Windows.Forms.Button();
@@ -57,7 +52,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShearNUP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AngleIncrementNUP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ScaleNUP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AngleNUP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SizeNUP)).BeginInit();
             this.SuspendLayout();
@@ -81,12 +75,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.StartStopRotationB);
             this.splitContainer1.Panel2.Controls.Add(this.RandomB);
             this.splitContainer1.Panel2.Controls.Add(this.SpaceShipB);
-            this.splitContainer1.Panel2.Controls.Add(this.ScaleL);
-            this.splitContainer1.Panel2.Controls.Add(this.ScaleNUP);
-            this.splitContainer1.Panel2.Controls.Add(this.TextTB);
             this.splitContainer1.Panel2.Controls.Add(this.AngleNUP);
             this.splitContainer1.Panel2.Controls.Add(this.SizeNUP);
-            this.splitContainer1.Panel2.Controls.Add(this.TextL);
             this.splitContainer1.Panel2.Controls.Add(this.AngleL);
             this.splitContainer1.Panel2.Controls.Add(this.ColorL);
             this.splitContainer1.Panel2.Controls.Add(this.ColorB);
@@ -111,7 +101,7 @@
             // 
             this.ShearL.AutoSize = true;
             this.ShearL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ShearL.Location = new System.Drawing.Point(9, 302);
+            this.ShearL.Location = new System.Drawing.Point(5, 242);
             this.ShearL.Name = "ShearL";
             this.ShearL.Size = new System.Drawing.Size(56, 20);
             this.ShearL.TabIndex = 14;
@@ -126,7 +116,7 @@
             0,
             0,
             65536});
-            this.ShearNUP.Location = new System.Drawing.Point(69, 300);
+            this.ShearNUP.Location = new System.Drawing.Point(65, 240);
             this.ShearNUP.Maximum = new decimal(new int[] {
             15,
             0,
@@ -145,7 +135,7 @@
             // AngleIncrementNUP
             // 
             this.AngleIncrementNUP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AngleIncrementNUP.Location = new System.Drawing.Point(154, 249);
+            this.AngleIncrementNUP.Location = new System.Drawing.Point(150, 189);
             this.AngleIncrementNUP.Maximum = new decimal(new int[] {
             360,
             0,
@@ -169,7 +159,7 @@
             // StartStopRotationB
             // 
             this.StartStopRotationB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StartStopRotationB.Location = new System.Drawing.Point(7, 237);
+            this.StartStopRotationB.Location = new System.Drawing.Point(3, 177);
             this.StartStopRotationB.Name = "StartStopRotationB";
             this.StartStopRotationB.Size = new System.Drawing.Size(140, 57);
             this.StartStopRotationB.TabIndex = 11;
@@ -180,7 +170,7 @@
             // RandomB
             // 
             this.RandomB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RandomB.Location = new System.Drawing.Point(7, 179);
+            this.RandomB.Location = new System.Drawing.Point(3, 119);
             this.RandomB.Name = "RandomB";
             this.RandomB.Size = new System.Drawing.Size(195, 52);
             this.RandomB.TabIndex = 10;
@@ -198,56 +188,6 @@
             this.SpaceShipB.Text = "Space Ship By #avice";
             this.SpaceShipB.UseVisualStyleBackColor = true;
             this.SpaceShipB.Click += new System.EventHandler(this.SpaceShipB_Click);
-            // 
-            // ScaleL
-            // 
-            this.ScaleL.AutoSize = true;
-            this.ScaleL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ScaleL.Location = new System.Drawing.Point(8, 149);
-            this.ScaleL.Name = "ScaleL";
-            this.ScaleL.Size = new System.Drawing.Size(53, 20);
-            this.ScaleL.TabIndex = 8;
-            this.ScaleL.Text = "Scale:";
-            // 
-            // ScaleNUP
-            // 
-            this.ScaleNUP.DecimalPlaces = 1;
-            this.ScaleNUP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ScaleNUP.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.ScaleNUP.Location = new System.Drawing.Point(68, 147);
-            this.ScaleNUP.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.ScaleNUP.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.ScaleNUP.Name = "ScaleNUP";
-            this.ScaleNUP.Size = new System.Drawing.Size(92, 26);
-            this.ScaleNUP.TabIndex = 7;
-            this.ScaleNUP.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.ScaleNUP.ValueChanged += new System.EventHandler(this.ScaleNUP_ValueChanged);
-            // 
-            // TextTB
-            // 
-            this.TextTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextTB.Location = new System.Drawing.Point(68, 115);
-            this.TextTB.Margin = new System.Windows.Forms.Padding(2);
-            this.TextTB.Name = "TextTB";
-            this.TextTB.Size = new System.Drawing.Size(92, 26);
-            this.TextTB.TabIndex = 6;
-            this.TextTB.TextChanged += new System.EventHandler(this.TextTB_TextChanged);
             // 
             // AngleNUP
             // 
@@ -283,17 +223,6 @@
             0,
             0});
             this.SizeNUP.ValueChanged += new System.EventHandler(this.SizeNUP_ValueChanged);
-            // 
-            // TextL
-            // 
-            this.TextL.AutoSize = true;
-            this.TextL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextL.Location = new System.Drawing.Point(15, 114);
-            this.TextL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.TextL.Name = "TextL";
-            this.TextL.Size = new System.Drawing.Size(43, 20);
-            this.TextL.TabIndex = 3;
-            this.TextL.Text = "Text:";
             // 
             // AngleL
             // 
@@ -349,7 +278,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(647, 448);
             this.Controls.Add(this.splitContainer1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LAB3";
             this.Text = "62 года ТУСУР";
@@ -362,7 +290,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShearNUP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AngleIncrementNUP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ScaleNUP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AngleNUP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SizeNUP)).EndInit();
             this.ResumeLayout(false);
@@ -379,11 +306,7 @@
         private System.Windows.Forms.Label ColorL;
         private System.Windows.Forms.NumericUpDown SizeNUP;
         private System.Windows.Forms.NumericUpDown AngleNUP;
-        private System.Windows.Forms.Label TextL;
         private System.Windows.Forms.Label AngleL;
-        private System.Windows.Forms.TextBox TextTB;
-        private System.Windows.Forms.Label ScaleL;
-        private System.Windows.Forms.NumericUpDown ScaleNUP;
         private System.Windows.Forms.Button SpaceShipB;
         private System.Windows.Forms.Button RandomB;
         private System.Windows.Forms.Button StartStopRotationB;

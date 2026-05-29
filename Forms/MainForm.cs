@@ -40,5 +40,11 @@ namespace КГ
             LAB3 form = new LAB3();
             form.ShowDialog();
         }
+
+        private void Lab4B_Click(object sender, EventArgs e)
+        {
+            LAB4 form = new LAB4();
+            form.ShowDialog();
+        }
     }
 }

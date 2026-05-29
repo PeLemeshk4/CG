@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using КГ.Models;
 
 namespace КГ.Forms
 {
@@ -36,6 +37,69 @@ namespace КГ.Forms
             InitializeComponent();
         }
 
+        Dictionary<char, Letter3D> lettersDictionary;
+        private void InitializeLetters()
+        {
+            lettersDictionary = new Dictionary<char, Letter3D>();
+
+            // Буква H
+            var letterH = new Letter3D();
+            letterH.Character = 'H';
+            letterH.Vertices = new double[,]
+            {
+                { -1, -1, 0, 1 }, { -1, 1, 0, 1 },
+                {  1, -1, 0, 1 }, {  1, 1, 0, 1 },
+                { -1,   0, 0, 1 }, {  1,  0, 0, 1 }
+            };
+            letterH.Edges = new int[,]
+            {
+                { 0, 1 }, { 2, 3 }, { 4, 5 }
+            };
+            lettersDictionary.Add('H', letterH);
+
+            // Буква E
+            var letterE = new Letter3D();
+            letterE.Character = 'E';
+            letterE.Vertices = new double[,]
+            {
+                { -1, -1, 0, 1 }, { -1, 1, 0, 1 },
+                {  1, -1, 0, 1 }, {  1, 1, 0, 1 },
+                { -1,  0, 0, 1 }, {  1, 0, 0, 1 }
+            };
+            letterE.Edges = new int[,]
+            {
+                { 0, 1 }, { 0, 2 }, { 1, 3 }, { 4, 5 }
+            };
+            lettersDictionary.Add('E', letterE);
+
+            // Буква L
+            var letterL = new Letter3D();
+            letterL.Character = 'L';
+            letterL.Vertices = new double[,]
+            {
+                { -1, -1, 0, 1 }, { -1, 1, 0, 1 }, { 1, 1, 0, 1 }
+            };
+            letterL.Edges = new int[,]
+            {
+                { 0, 1 }, { 1, 2 }
+            };
+            lettersDictionary.Add('L', letterL);
+
+            // Буква O
+            var letterO = new Letter3D();
+            letterO.Character = 'O';
+            letterO.Vertices = new double[,]
+            {
+                { -1, -1, 0, 1 }, { -1, 1, 0, 1 },
+                {  1, 1, 0, 1 }, {  1, -1, 0, 1 }
+            };
+            letterO.Edges = new int[,]
+            {
+                { 0, 1 }, { 1, 2 }, { 2, 3 }, { 3, 0 }
+            };
+            lettersDictionary.Add('O', letterO);
+        }
+
         private void LAB3_Load(object sender, EventArgs e)
         {
             random = new Random();
@@ -43,6 +107,7 @@ namespace КГ.Forms
             widthPb = pictureBox1.Width;
             heightPb = pictureBox1.Height;
 
+            InitializeLetters();
             InitializeClearedBmp();
             ClearBmp();
             pictureBox1.Image = bmp;
@@ -50,7 +115,6 @@ namespace КГ.Forms
             SizeNUP.Value = size;
             ColorB.BackColor = color;
             AngleNUP.Value = angle;
-            TextTB.Text = text;
         }
 
         private void InitializeClearedBmp()
@@ -70,115 +134,38 @@ namespace КГ.Forms
             bmp = new Bitmap(clearedBmp);
         }
 
-        private Bitmap DrawText()
-        {
-            if (text == "") return new Bitmap(1, 1);
-
-            Font font = new Font("Arial", (int)(size * scale));
-            Bitmap measureBmp = new Bitmap(1, 1);
-            using (Graphics measureG = Graphics.FromImage(measureBmp))
-            {
-                SizeF textSize = measureG.MeasureString(text, font);
-                float originalWidth = textSize.Width;
-                float originalHeight = textSize.Height;
-
-                int width = (int)Math.Ceiling(originalWidth * originalWidth / originalHeight);
-                int height = (int)Math.Ceiling(originalHeight * originalWidth / originalHeight);
-
-                Bitmap textBmp = new Bitmap(width, height);
-
-                using (Graphics g = Graphics.FromImage(textBmp))
-                {
-                    g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-                    g.SmoothingMode = SmoothingMode.AntiAlias;
-
-                    float centerX = width / 2f;
-                    float centerY = height / 2f;
-                    g.TranslateTransform(centerX, centerY);
-
-                    g.RotateTransform(angle);
-
-                    float offsetX = -textSize.Width / 2f;
-                    float offsetY = -textSize.Height / 2f;
-
-                    g.DrawString(text, font, new SolidBrush(color), offsetX, offsetY);
-                }
-
-                if (shear != 0)
-                {
-                    textBmp = MakeShear(textBmp);
-                }
-
-                return textBmp;
-            }
-        }
-
-        private Bitmap MakeShear(Bitmap textBmp)
-        {
-            int width = textBmp.Width;
-            int height = textBmp.Height;
-
-            var corners = new[] {
-            new Point(0, 0),
-            new Point(width, 0),
-            new Point(0, height),
-            new Point(width, height)
-        };
-
-            var transformedCorners = new Point[4];
-            for (int i = 0; i < 4; i++)
-            {
-                var p = corners[i];
-                double newX = p.X + shear * p.Y;
-                double newY = p.Y;
-                transformedCorners[i] = new Point((int)Math.Round(newX), (int)Math.Round(newY));
-            }
-
-            int minX = int.MaxValue, minY = int.MaxValue;
-            int maxX = int.MinValue, maxY = int.MinValue;
-            foreach (var p in transformedCorners)
-            {
-                minX = Math.Min(minX, p.X);
-                minY = Math.Min(minY, p.Y);
-                maxX = Math.Max(maxX, p.X);
-                maxY = Math.Max(maxY, p.Y);
-            }
-
-            int newWidth = maxX - minX + 1;
-            int newHeight = maxY - minY + 1;
-
-            Bitmap newBitmap = new Bitmap(newWidth, newHeight, PixelFormat.Format32bppArgb);
-            using (Graphics g = Graphics.FromImage(newBitmap))
-            {
-                g.Clear(Color.Transparent);
-            }
-
-            for (int newY = 0; newY < newHeight; newY++)
-            {
-                for (int newX = 0; newX < newWidth; newX++)
-                {
-                    double xPrime = newX + minX;
-                    double yPrime = newY + minY;
-
-                    double originalX = xPrime - shear * yPrime;
-                    double originalY = yPrime;
-
-                    if (originalX >= 0 && originalX < width && originalY >= 0 && originalY < height)
-                    {
-                        Color pixelColor = textBmp.GetPixel((int)originalX, (int)originalY);
-                        newBitmap.SetPixel(newX, newY, pixelColor);
-                    }
-                }
-            }
-
-            return newBitmap;
-        }
-
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         { 
             textPosition = new Point(e.X, e.Y);
 
             UpdatePb();
+        }
+
+        private Bitmap DrawText(string text)
+        {
+            int letterSize = size * 2;
+            int spaceBetweenLetters = 2;
+            int textLength = text.Length;
+
+            int width = (letterSize + spaceBetweenLetters) * textLength + (int)(letterSize * Math.Abs(shear)) + letterSize;
+            int height = width;
+            Bitmap helloBmp = new Bitmap(width, height);
+
+            using (Graphics g = Graphics.FromImage(helloBmp))
+            {
+                g.TranslateTransform(width / 2, height / 2);
+                g.RotateTransform(angle);
+
+                for (int i = 0; i < textLength; i++)
+                {
+                    Bitmap letterBmp = lettersDictionary[text[i]].DrawLetter(size, color, shear);
+                    int xPosition = (letterSize + spaceBetweenLetters) * i - width / 2 + size;
+
+                    g.DrawImage(letterBmp, xPosition, -size);
+                }
+            }
+
+            return helloBmp;
         }
 
         private void UpdatePb()
@@ -190,11 +177,10 @@ namespace КГ.Forms
                 InitializeClearedBmp();
             }
 
-
             ClearBmp();
             using (Graphics g = Graphics.FromImage(bmp))
             {
-                Bitmap textBmp = DrawText();
+                Bitmap textBmp = DrawText("HELLO");
                 int drawX = (int)(textPosition.X - textBmp.Width / 2f);
                 int drawY = (int)(textPosition.Y - textBmp.Height / 2f);
                 g.DrawImage(textBmp, drawX, drawY);
@@ -225,20 +211,6 @@ namespace КГ.Forms
         private void AngleNUP_ValueChanged(object sender, EventArgs e)
         {
             angle = (int)AngleNUP.Value;
-
-            if (isTextDraw) UpdatePb();
-        }
-
-        private void TextTB_TextChanged(object sender, EventArgs e)
-        {
-            text = TextTB.Text;
-
-            if (isTextDraw) UpdatePb();
-        }
-
-        private void ScaleNUP_ValueChanged(object sender, EventArgs e)
-        {
-            scale = (float)ScaleNUP.Value;
 
             if (isTextDraw) UpdatePb();
         }
