@@ -3,210 +3,270 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace КГ.Forms
 {
     public partial class LAB4 : Form
-    {
+    {  
+        private int gridSize = 10;
+        private float step = 0.1f;
+        private int pointsPerSide;
 
-        private float angleX = 0; // Угол вращения по оси X
-        private float angleY = 0; // Угол вращения по оси Y
-        private float scale = 1.0f; // Коэффициент масштабирования
-        private float offsetX = 0, offsetY = 0; // Смещение по экрану
+        private float[,] transformMatr = new float[4, 4];
+        private Point lastMousePos;
+
+        private float scale = 1.0f;
+        private float xAngle = 0.0f;
+        private float yAngle = 0.0f;
+        private float dx = 0.0f;
+        private float dy = 0.0f;
+
+        private bool isFirst = false;
+        private bool isSecond = false;
 
         public LAB4()
         {
             InitializeComponent();
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox1.BackColor = Color.White;
-
-            // Настройка таймера для анимации
-            timer1.Interval = 50; // ~20 FPS
-            timer1.Tick += TimerTick;
-            timer1.Start();
-
-            // Обработка клавиш
-            this.KeyDown += Form1_KeyDown;
             pictureBox1.MouseWheel += PictureBox1_MouseWheel;
-            pictureBox1.MouseDown += PictureBox1_MouseDown;
-            pictureBox1.MouseMove += PictureBox1_MouseMove;
 
-            // Первоначальная отрисовка
-            DrawGraph();
+            pointsPerSide = (int)(gridSize / step);
+            GridSizeNUP.Value = gridSize;
         }
 
-        // Основная функция отрисовки графика
-        private void DrawGraph()
+        private float GetFirstZ(float x, float y)
         {
-            Bitmap bitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-            Graphics g = Graphics.FromImage(bitmap);
+            return (float)Math.Sin(x * x - y * y);
+        }
 
-            // Очищаем битмап
+        private float GetSecondZ(float x, float y)
+        {
+            return (float)Math.Pow(Math.E, Math.Sin(x) - Math.Cos(y));
+        }
+
+        private float[,] ApplyTransform(float[,] points)
+        {
+            transformMatr = Multiply(RotationX(xAngle), RotationY(yAngle));
+            transformMatr = Multiply(transformMatr, Scale(scale, scale, scale));
+            transformMatr = Multiply(transformMatr, Translate(dx, dy, 0));
+            return Multiply(points, transformMatr);
+        }
+
+        private void PictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            if (!(isFirst || isSecond)) return;
+
+            Graphics g = e.Graphics;
             g.Clear(Color.White);
 
-            // Рисуем сетку
-            DrawGrid(g);
+            int width = pictureBox1.Width;
+            int height = pictureBox1.Height;
 
-            // Рисуем поверхность
-            DrawSurface(g);
+            float[,] points = new float[pointsPerSide * pointsPerSide, 4];
 
-            g.Dispose();
-            pictureBox1.Image = bitmap;
-        }
-
-        // Функция для расчёта значения поверхности (z = f(x, y))
-        private double CalculateZ(double x, double y)
-        {
-            // Пример: z = sin(√(x² + y²))
-            return Math.Sin(Math.Sqrt(x * x + y * y)) * 3;
-        }
-
-        // Проекция 3D-точки в 2D (аксонометрия)
-        private PointF Project3DTo2D(double x, double y, double z)
-        {
-            float screenWidth = pictureBox1.Width;
-            float screenHeight = pictureBox1.Height;
-
-            // Вращение по X и Y
-            double cosX = Math.Cos(angleX), sinX = Math.Sin(angleX);
-            double cosY = Math.Cos(angleY), sinY = Math.Sin(angleY);
-
-            // Применяем вращение
-            double xRot = x * cosY + z * sinY;
-            double yRot = y;
-            double zRot = -x * sinY + z * cosY;
-
-            double xProj = xRot * cosX - zRot * sinX;
-            double yProj = yRot;
-
-            // Масштабирование и смещение
-            float xScreen = (float)(screenWidth / 2 + xProj * scale * 5 + offsetX);
-            float yScreen = (float)(screenHeight / 2 - yProj * scale * 5 + offsetY);
-
-            return new PointF(xScreen, yScreen);
-        }
-
-        // Рисуем сетку
-        private void DrawGrid(Graphics g)
-        {
-            Pen pen = new Pen(Color.LightGray, 1);
-            for (int i = -10; i <= 10; i += 2)
+            if (isFirst)
             {
-                // Оси X и Y
-                PointF p1 = Project3DTo2D(i, -10, 0);
-                PointF p2 = Project3DTo2D(i, 10, 0);
-                g.DrawLine(pen, p1, p2);
-
-                p1 = Project3DTo2D(-10, i, 0);
-                p2 = Project3DTo2D(10, i, 0);
-                g.DrawLine(pen, p1, p2);
-            }
-            pen.Dispose();
-        }
-
-        // Рисуем поверхность
-        private void DrawSurface(Graphics g)
-        {
-            Pen pen = new Pen(Color.Black, 1);
-            int steps = 20;
-
-            for (int i = 0; i < steps; i++)
-            {
-                for (int j = 0; j < steps; j++)
+                for (int i = 0; i < pointsPerSide; i++)
                 {
-                    double x1 = -10 + (i * 20.0 / steps);
-                    double y1 = -10 + (j * 20.0 / steps);
-                    double z1 = CalculateZ(x1, y1);
-
-                    double x2 = -10 + ((i + 1) * 20.0 / steps);
-                    double y2 = -10 + (j * 20.0 / steps);
-                    double z2 = CalculateZ(x2, y2);
-
-                    double x3 = -10 + (i * 20.0 / steps);
-                    double y3 = -10 + ((j + 1) * 20.0 / steps);
-                    double z3 = CalculateZ(x3, y3);
-
-                    // Проецируем точки
-                    PointF p1 = Project3DTo2D(x1, y1, z1);
-                    PointF p2 = Project3DTo2D(x2, y2, z2);
-                    PointF p3 = Project3DTo2D(x3, y3, z3);
-
-                    // Рисуем линии между точками
-                    g.DrawLine(pen, p1, p2);
-                    g.DrawLine(pen, p1, p3);
+                    for (int j = 0; j < pointsPerSide; j++)
+                    {
+                        float x = (i - (pointsPerSide - 1) / 2f) * step;
+                        float y = (j - (pointsPerSide - 1) / 2f) * step;
+                        float z = GetFirstZ(x, y);
+                        points[i * pointsPerSide + j, 0] = x;
+                        points[i * pointsPerSide + j, 1] = y;
+                        points[i * pointsPerSide + j, 2] = z;
+                        points[i * pointsPerSide + j, 3] = 1;
+                    }
                 }
             }
-            pen.Dispose();
-        }
-
-        // Обработка тика таймера (вращение)
-        private void TimerTick(object sender, EventArgs e)
-        {
-            angleX += 0.05f; // Вращение по X
-            angleY += 0.03f; // Вращение по Y
-            DrawGraph();
-        }
-
-        // Управление клавиатурой
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            switch (e.KeyCode)
+            else
             {
-                case Keys.Left: angleY += 0.1f; break;
-                case Keys.Right: angleY -= 0.1f; break;
-                case Keys.Up: angleX += 0.1f; break;
-                case Keys.Down: angleX -= 0.1f; break;
-                case Keys.Add: scale *= 1.1f; break; // Увеличение
-                case Keys.Subtract: scale /= 1.1f; break; // Уменьшение
-                case Keys.W: offsetY -= 10; break; // Двигаем по Y
-                case Keys.S: offsetY += 10; break;
-                case Keys.A: offsetX -= 10; break; // Двигаем по X
-                case Keys.D: offsetX += 10; break;
+                for (int i = 0; i < pointsPerSide; i++)
+                {
+                    for (int j = 0; j < pointsPerSide; j++)
+                    {
+                        float x = (i - (pointsPerSide - 1) / 2f) * step;
+                        float y = (j - (pointsPerSide - 1) / 2f) * step;
+                        float z = GetSecondZ(x, y);
+                        points[i * pointsPerSide + j, 0] = x;
+                        points[i * pointsPerSide + j, 1] = y;
+                        points[i * pointsPerSide + j, 2] = z;
+                        points[i * pointsPerSide + j, 3] = 1;
+                    }
+                }
             }
-            DrawGraph();
+
+            float[,] transformedPoints = ApplyTransform(points);
+
+            PointF[] projectedPoints = ProjectTo2D(transformedPoints, width, height);
+
+            using (Pen pen = new Pen(Color.Black, 1f))
+            {
+                for (int i = 0; i < pointsPerSide; i++)
+                {
+                    for (int j = 0; j < pointsPerSide - 1; j++)
+                    {
+                        int idx1 = i * pointsPerSide + j;
+                        int idx2 = i * pointsPerSide + j + 1;
+                        g.DrawLine(pen, projectedPoints[idx1], projectedPoints[idx2]);
+                    }
+                }
+
+                for (int i = 0; i < pointsPerSide - 1; i++)
+                {
+                    for (int j = 0; j < pointsPerSide; j++)
+                    {
+                        int idx1 = i * pointsPerSide + j;
+                        int idx2 = (i + 1) * pointsPerSide + j;
+                        g.DrawLine(pen, projectedPoints[idx1], projectedPoints[idx2]);
+                    }
+                }
+            }
         }
 
-        // Колесо мыши для масштабирования
-        private void PictureBox1_MouseWheel(object sender, MouseEventArgs e)
+        private PointF[] ProjectTo2D(float[,] points, int width, int height)
         {
-            if (e.Delta > 0) scale *= 1.1f; // Увеличение
-            else scale /= 1.1f; // Уменьшение
-            DrawGraph();
+            float scale = 100;
+            PointF[] projectedPoints = new PointF[points.GetLength(0)];
+            for (int i = 0; i < points.GetLength(0); i++)
+            {
+                projectedPoints[i].X = points[i, 0] * scale + width / 2f;
+                projectedPoints[i].Y = -points[i, 1] * scale + height / 2f;
+            }
+            return projectedPoints;
         }
-
-        // Перенос мышью (для панорамирования)
-        private Point lastMousePos;
-        private bool isDragging = false;
 
         private void PictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                isDragging = true;
-                lastMousePos = e.Location;
-            }
+            lastMousePos = e.Location;
         }
 
         private void PictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (isDragging)
+            if (e.Button == MouseButtons.Right)
             {
-                offsetX += (e.X - lastMousePos.X);
-                offsetY += (e.Y - lastMousePos.Y);
-                lastMousePos = e.Location;
-                DrawGraph();
+                float dx = e.X - lastMousePos.X;
+                float dy = e.Y - lastMousePos.Y;
+
+                xAngle += dy * 0.01f;
+                yAngle += dx * 0.01f;
             }
+            else if (e.Button == MouseButtons.Left)
+            {
+                dx += (e.X - lastMousePos.X) * 0.01f;
+                dy += -(e.Y - lastMousePos.Y) * 0.01f;
+            }
+
+            lastMousePos = e.Location;
+            pictureBox1.Invalidate();
         }
 
-        private void PictureBox1_MouseUp(object sender, MouseEventArgs e)
+        private void PictureBox1_MouseWheel(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-                isDragging = false;
+            float scaleFactor = e.Delta > 0 ? 0.1f : -0.1f;
+            if (scale + scaleFactor > 0)
+            {
+                scale += scaleFactor;
+            }
+            pictureBox1.Invalidate();
+        }
+
+        private float[,] Multiply(float[,] a, float[,] b)
+        {
+            int n = a.GetLength(0);
+            int m = b.GetLength(1);
+
+            float[,] r = new float[n, m];
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    r[i, j] = 0;
+                    for (int ii = 0; ii < m; ii++)
+                    {
+                        r[i, j] += a[i, ii] * b[ii, j];
+                    }
+                }
+            }
+            return r;
+        }
+        public float[,] RotationX(float angle)
+        {
+            float c = (float)Math.Cos(angle);
+            float s = (float)Math.Sin(angle);
+            return new float[4, 4]
+            {
+                { 1, 0, 0, 0 },
+                { 0, c, -s, 0 },
+                { 0, s, c, 0 },
+                { 0, 0, 0, 1 }
+            };  
+        }
+        public float[,] RotationY(float angle)
+        {
+            float c = (float)Math.Cos(angle);
+            float s = (float)Math.Sin(angle);
+            return new float[4, 4]
+            {
+                { c, 0, s, 0 },
+                { 0, 1, 0, 0 },
+                { -s, 0, c, 0 },
+                { 0, 0, 0, 1 }
+            };
+        }
+        public float[,] Scale(float x, float y, float z)
+        {
+            return new float[4, 4]
+            {
+                { x, 0, 0, 0 },
+                { 0, y, 0, 0 },
+                { 0, 0, z, 0 },
+                { 0, 0, 0, 1 }
+            }; 
+        }
+        public float[,] Translate(float x, float y, float z)
+        {
+            return new float[4, 4]
+            {
+                { 1, 0, 0, 1 },
+                { 0, 1, 0, 1 },
+                { 0, 0, 1, 1 },
+                { x, y, z, 1 }
+            };
+        }
+
+        private void Hexahedron_Click(object sender, EventArgs e)
+        {
+            Hexahedron form = new Hexahedron();
+            form.ShowDialog();
+        }
+
+        private void FirstB_Click(object sender, EventArgs e)
+        {
+            isFirst = true;
+            isSecond = false;
+            pictureBox1.Invalidate();
+        }
+
+        private void SecondB_Click(object sender, EventArgs e)
+        {
+            isFirst = false;
+            isSecond = true;
+            pictureBox1.Invalidate();
+        }
+
+        private void GridSizeNUP_ValueChanged(object sender, EventArgs e)
+        {
+            gridSize = (int)GridSizeNUP.Value;
+            pointsPerSide = (int)(gridSize / step);
+            pictureBox1.Invalidate();
         }
     }
 }

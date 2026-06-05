@@ -22,8 +22,6 @@ namespace КГ.Forms
         int size = 14;
         Color color = Color.Black;
         int angle = 0;
-        string text = "Hello World!";
-        float scale = 1;
         bool isTextDraw = false;
         Random random;
         bool isRotating = false;

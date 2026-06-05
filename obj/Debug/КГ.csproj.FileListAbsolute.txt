@@ -38,3 +38,4 @@ D:\Visual studio 2022 projects\CG\obj\Debug\КГ.Forms.LAB3.resources
 C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.Forms.SpaceShip.resources
 C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.Forms.LAB3.resources
 C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.Forms.LAB4.resources
+C:\Users\User\Documents\GitHub\КГ\obj\Debug\КГ.Forms.Hexahedron.resources
